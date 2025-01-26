@@ -170,7 +170,7 @@ section#projects h1 {
 .githubLink {
   margin-top: 1rem;
   display: inline-block;
-  text-align: center;
+  text-align: left;
   transition: transform 0.3s ease;
 }
 
@@ -187,27 +187,6 @@ section#projects h1 {
 .githubLink:active img {
   transform: scale(0.95);
 }
-
-@media (max-width: 768px) {
-  .projectCard {
-    flex-direction: column; 
-  }
-
-  .projectText {
-    padding-left: 0;
-  }
-
-  .projectImage {
-    justify-content: center;
-  }
-
-  .projectImage img {
-    width: 80%;
-  }
-}
-
-
-
 
 
 
@@ -243,5 +222,21 @@ section#projects h1 {
   .imageContainer img {
     width: 200px;
     height: 200px;
+  }
+
+  .projectCard {
+    flex-direction: column; 
+  }
+
+  .projectText {
+    padding-left: 0;
+  }
+
+  .projectImage {
+    justify-content: center;
+  }
+
+  .projectImage img {
+    width: 80%;
   }
 }
