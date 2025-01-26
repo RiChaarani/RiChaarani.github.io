@@ -68,12 +68,15 @@ section#intro::after {
   transform: scale(1);
 }
 
-/*  About me */
+/* About Me */
 section#aboutMe {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   min-height: 100vh;
   background: linear-gradient(to bottom, #b3d9ff, #80c1ff);
-  position: relative;
   padding: 2rem;
+  position: relative;
 }
 
 section#aboutMe::after {
@@ -84,6 +87,60 @@ section#aboutMe::after {
   width: 100%;
   height: 50px;
   background: linear-gradient(to bottom, rgba(179, 217, 255, 0), #99caff);
+}
+
+.aboutTextContainer {
+  max-width: 600px;
+  animation: fadeInLeft 1.5s ease;
+}
+
+.aboutTextContainer h1 {
+  font-size: 2.5rem;
+  color: #1a3d5d;
+  margin-bottom: 1rem;
+}
+
+.aboutTextContainer p {
+  font-size: 1.2rem;
+  color: #1a3d5d;
+  margin-bottom: 2rem;
+}
+
+.aboutImageContainer {
+  animation: fadeInRight 1.5s ease;
+}
+
+.aboutImageContainer img {
+  width: 400px;  /* Adjust to create rectangular look */
+  height: 250px; /* Adjust to create rectangular look */
+  object-fit: cover; /* Ensure the image fills the space without distortion */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.aboutImageContainer img:hover {
+  transform: scale(1.05);
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  section#aboutMe {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutImageContainer img {
+    width: 80%;    /* Adjust for smaller screens */
+    height: auto;  /* Maintain aspect ratio */
+  }
+
+  .aboutTextContainer {
+    order: 2; /* Ensures text stays on top in small screens */
+  }
+
+  .aboutImageContainer {
+    order: 1; /* Ensures image comes first in small screens */
+  }
 }
 
 /* Toolkit */
