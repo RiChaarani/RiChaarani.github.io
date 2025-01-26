@@ -73,7 +73,7 @@ section#aboutMe {
   display: flex;
   justify-content: space-evenly;
   min-height: 50%;
-  background: linear-gradient(to bottom, #4e5b6e, #303d49); /* Lighter dark shade */
+  background: linear-gradient(to bottom, #4e5b6e, #303d49);
   padding: 2rem;
   position: relative;
 }
@@ -215,6 +215,64 @@ section#toolkit {
     font-size: 1rem;
   }
 }
+
+/* Contact */
+#contact {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #4e5b6e, #303d49);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+#contact h1 {
+  font-size: 2rem;
+  color: #e0e0e0;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-link {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.contact-link img:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .contact-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-link img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 
 
 /* Projects */
@@ -362,4 +420,5 @@ section#projects p, h2 {
   .projectImage img {
     width: 80%;
   }
+
 }
