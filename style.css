@@ -385,6 +385,28 @@ section#projects p, h2 {
   transform: scale(0.95);
 }
 
+.styled-link {
+  text-decoration: none;
+  color: #0077cc;
+  font-family: 'Arial', sans-serif;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.styled-link:hover {
+  color: #0056a3;
+  transform: scale(1.05);
+}
+
+.styled-link h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.styled-link:hover h2 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;
